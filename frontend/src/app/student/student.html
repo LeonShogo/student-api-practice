@@ -1,0 +1,16 @@
+<h2>Studenten</h2>
+
+
+<label for="student-name">Name:</label>
+<input type="text" id="student-name" [(ngModel)]="newName">
+
+<label for="student-age">Age:</label>
+<input type="number" id="student-age" [(ngModel)]="newAge">
+
+<button (click)="addStudent()">Student hinzufügen</button>
+
+@for (student of students() ; track student.id) {
+<p>ID: {{ student.id }}</p>
+<p>Name: {{ student.name }}</p>
+<p>Age: {{ student.age }}</p>
+}
