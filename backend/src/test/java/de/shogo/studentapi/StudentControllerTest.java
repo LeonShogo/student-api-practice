@@ -45,7 +45,7 @@ class StudentControllerTest {
     @Test
     void getStudent_whenFound_returnStudent() throws Exception {
 
-        Student Anna = new Student("Anna", 23);
+        Student anna = new Student("Anna", 23);
         when(studentService.getStudent(1L)).thenReturn(Anna);
 
         mockMvc.perform(get("/api/students/1"))
